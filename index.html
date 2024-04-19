@@ -1,0 +1,149 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="homePage.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div id="container" class="container">
+    <div class="row">
+      <div class="col align-items-center flex-col sign-up">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-up">
+            <div class="input-group">
+              <i class="bx bxs-user"></i>
+              <input type="text" placeholder="Username" id="name" />
+            </div>
+            <div class="input-group">
+              <i class="bx bx-mail-send"></i>
+              <input type="email" placeholder="Email" id="email" />
+            </div>
+            <div class="input-group">
+              <i class="bx bxs-lock-alt"></i>
+              <input type="password" placeholder="Password" id="password" />
+            </div>
+            <div class="input-group">
+              <i class="bx bxs-lock-alt"></i>
+              <input type="password" placeholder="Confirm password" id="c-password" />
+            </div>
+            <button id="sign-up-button" onclick="signUpButton()" class="Sign-btn">
+              Sign up
+            </button>
+            <p>
+              <span> Already have an account? </span>
+              <b onclick="toggle()" class="pointer"> Sign in here </b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col align-items-center flex-col sign-in">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-in">
+            <div class="input-group">
+              <i class="bx bxs-user"></i>
+              <input type="text" placeholder="Username" id="username" />
+            </div>
+            <div class="input-group">
+              <i class="bx bxs-lock-alt"></i>
+              <input type="password" placeholder="Password" id="sign-in-password" />
+            </div>
+            <button id="sign-in-btn" onclick="signInButton()">Sign in</button>
+            <p>
+              <b> Forgot password? </b>
+            </p>
+            <p>
+              <span> Don't have an account? </span>
+              <b onclick="toggle()" class="pointer"> Sign up here </b>
+            </p>
+          </div>
+        </div>
+        <div class="form-wrapper"></div>
+      </div>
+    </div>
+    <div class="row content-row">
+      <div class="col align-items-center flex-col">
+        <div class="text sign-in">
+          <h2>Welcome To Long Drive Cars</h2>
+        </div>
+        <div class="img sign-in"></div>
+      </div>
+      <div class="col align-items-center flex-col">
+        <div class="img sign-up"></div>
+        <div class="text sign-up">
+          <h2>Create New Account</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let container = document.getElementById("container");
+
+    toggle = () => {
+      container.classList.toggle("sign-in");
+      container.classList.toggle("sign-up");
+    };
+
+    setTimeout(() => {
+      container.classList.add("sign-in");
+    }, 200);
+
+    function signUpButton() {
+      event.preventDefault();
+      Swal.fire({
+        title: "Good job!",
+        text: "Sign in Successfully",
+        icon: "success",
+      });
+      let getName = document.getElementById("name").value;
+      let getEmail = document.getElementById("email").value;
+      let getPassword = document.getElementById("password").value;
+      let getConformPassword = document.getElementById("c-password").value;
+      let signUpButton = document.querySelector(".Sign-btn");
+      localStorage.setItem("Name", getName);
+      localStorage.setItem("Mail", getEmail);
+      localStorage.setItem("password", getPassword);
+      localStorage.setItem("ConformPassword", getConformPassword);
+    }
+
+    function signInButton() {
+      event.preventDefault();
+
+      var enterUserName = document.getElementById("username").value;
+      var enterPassword = document.getElementById("sign-in-password").value;
+      // console.log(enterUserName);
+      // console.log(enterPassword);
+
+      var getMail = localStorage.getItem("Mail");
+      var getPass = localStorage.getItem("password");
+      // console.log(getMail);
+      //  console.log(getPass);
+
+      if (enterUserName === getMail && enterPassword === getPass) {
+        // alert("LOgin is success")
+        Swal.fire({
+          title: "Good job!",
+          text: "Sign in Successfully",
+          icon: "success",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "homeScreen.html";
+          }
+        });
+      } else {
+        //alert("Invalid userName and password")
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Invalid Mail id and Password",
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

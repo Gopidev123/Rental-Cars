@@ -1,0 +1,201 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+body {
+    box-sizing: border-box;
+
+}
+
+.logo {
+    text-align: center; 
+    margin: 40px 0; 
+}
+.background-image{
+    background-image: url('Images/10006.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 0.1px;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+     
+    color: #fff; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px;
+}
+
+
+.logo img {
+    height: 50px; 
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 30px;
+    
+}
+
+nav li {
+    margin-right: 80px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+nav a:hover {
+    color: #ffcc00; 
+}
+
+.background-image h1{
+    color: white;
+    margin-top: 400px;
+    margin-left: 80px;
+    font-weight: 500px;
+}
+
+.service-head h3{
+
+    margin-left: 40%;
+    font-size: 30px;
+    color: rgb(105, 104, 104);
+    margin-top: 100px;
+}
+.service{
+
+    width: 250px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    margin-top: 100px;
+}
+.service img{
+
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 20px;
+    
+}
+.service h2{
+    color:rgb(77, 72, 72);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.service p{
+    color:rgb(77, 72, 72);
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.services{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-items{
+
+    display: flex;
+    justify-content:space-evenly;
+    background-color: black;
+    height: 500px;
+    width: auto;
+    margin-top: 100px;
+
+}
+.branches{
+    color: white;
+    margin-left: 100px;
+    margin-top: 100px;
+    font-size: 20px;
+}
+.branches li,a{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: white;
+    
+}
+.usefull-links{
+
+    color: white;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.usefull-links li, a{
+
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+
+}
+
+.head-office{
+    color: white;
+    margin-top: 100px;
+}
+.head-office p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+p{
+    color: white;
+    margin-top: 400px;
+}

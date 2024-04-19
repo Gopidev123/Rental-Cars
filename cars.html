@@ -1,0 +1,245 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cars.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="Images/10.JPG" alt="" />
+    </div>
+    <div class="background-image">
+      <nav>
+        <!-- <div class="logo">
+                    <h2>Long Drive Cars</h2>
+                </div> -->
+        <ul>
+          <li><a href="HomeScreen.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Choose Your Car</h1>
+    </div>
+
+    <div id="carList" class="car-div"></div>
+    
+
+    <footer>
+      <div class="footer-items">
+        <div class="branches">
+          <h2>Our Branches</h2>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="#">Contact</a></li>
+        </div>
+        <div class="usefull-links">
+          <h2>Use Full Links</h2>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact Us</a></li>
+        </div>
+        <div class="head-office">
+          <h2>Head Office</h2>
+          <p>
+            Long Drive Cars, Pillar No 129, <br />Main Road, beside
+            Medipally,<br />
+            Medipally, Hyderabad,<br />
+            Telangana 500098
+          </p>
+        </div>
+        <p>&copy; 2024 Long Drive Cars. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      var getCarImage = document.getElementById("carImage");
+      var getCarName = document.getElementById("carName");
+      var getPrice = document.getElementById("price");
+      var getCar = document.getElementById("car");
+      var carsDetails = [
+        {
+          name: "Mercedes Grand Sedan",
+          Price: "2000/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "http://res.cloudinary.com/dwmwpmrpo/image/upload/v1713063452/tltgykmaaq1oboaismyf.jpg",
+        },
+        {
+          name: "Range Rover",
+          Price: "2100/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713068748/timfsm4euqzgfdkvwynf.jpg",
+        },
+        {
+          name: "Mercedes Grand Sedan",
+          Price: "2200/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713068911/dr3itnampd4lghbeo8ta.jpg",
+        },
+        {
+          name: "Skoda Slavia",
+          Price: "1500/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069020/afnmzkqhaig8namvpprq.jpg",
+        },
+        {
+          name: "KIA Seltos",
+          Price: "2000/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069106/sdwhelvlfkqxss3ruhgd.jpg",
+        },
+        {
+          name: "KIA Carnes",
+          Price: "2000/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069219/pjwsyfpu5eh89ajba9yp.jpg",
+        },
+        {
+          name: "Kia Sunet",
+          Price: "2000/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069322/fcdfbk6ev0dfcotevbxu.jpg",
+        },
+        {
+          name: "MG Astor",
+          Price: "2000/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069414/eezzlpfebavti5lxk59f.jpg",
+        },
+        {
+          name: "MG hector",
+          Price: "2000/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069498/pzalpww99axr8bhjr1nx.jpg",
+        },
+        {
+          name: "Swift Dzire",
+          Price: "1100/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069602/hzlgm2zc2lcmdcsp4dq5.jpg",
+        },
+        {
+          name: "Tata Punch",
+          Price: "1100/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069776/r7verrqhmw64uo594luy.jpg",
+        },
+        {
+          name: "Mahindra XUV 700",
+          Price: "1100/day",
+          seatingCapacity: "7 seater",
+          garBoxType: "manul",
+          airBaga: 7,
+          image:
+            "https://res.cloudinary.com/dwmwpmrpo/image/upload/v1713069964/bhrgc1p18qbqtrxvmnig.jpg",
+        },
+      ];
+
+      var carListDiv = document.getElementById("carList");
+      carListDiv.className = "car-div";
+
+      function carDetails(car) {
+        // Prepare HTML content for the popup
+        const detailsHTML = `
+        <div>
+          <h3>${car.name}</h3>
+          <h3>Seating Capacity${car.seatingCapacity}</h3>
+          <h3>Garbox Type:${car.garBoxType}</h3>
+          <h3>Airbags:${car.airBaga}</h3>          
+        </div>
+      `;
+
+        // Display the popup using SweetAlert2
+        Swal.fire({
+          title: "Car Details",
+          html: detailsHTML,
+          confirmButtonText: "Close",
+          width: "400px",
+        });
+      }
+
+      for (var i = 0; i < carsDetails.length; i++) {
+        var car = carsDetails[i];
+        var carContainer = document.createElement("div");
+        carContainer.className = "car-container";
+
+        var carImage = document.createElement("img");
+        carImage.className = "car-image";
+        carImage.src = car.image;
+
+        var carName = document.createElement("p");
+        carName.textContent = "Name: " + car.name;
+        carName.className = "carname";
+
+        var carPrice = document.createElement("p");
+        carPrice.className = "carprice";
+        carPrice.textContent = "Price Per Day: " + car.Price;
+
+        var bookButton = document.createElement("button");
+        bookButton.textContent = "Book Now";
+        bookButton.className = "book-button";
+        bookButton.onclick = function () {
+          
+           window.location.href = "carBooking.html";
+
+
+        };
+
+        var detailsButton = document.createElement("button");
+        detailsButton.textContent = "Car Details";
+        detailsButton.className = "details-button";
+        detailsButton.onclick = (function (car) {
+          return function () {
+            carDetails(car);
+          };
+        })(car); 
+
+        carContainer.appendChild(carImage);
+        carContainer.appendChild(carName);
+        carContainer.appendChild(carPrice);
+        carContainer.appendChild(bookButton);
+        carContainer.appendChild(detailsButton);
+        carListDiv.appendChild(carContainer);
+      }
+
+    </script>
+  </body>
+</html>

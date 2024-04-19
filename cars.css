@@ -1,0 +1,187 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.logo {
+  text-align: center;
+  margin: 40px 0;
+}
+.background-image {
+  background-image: url("Images/10007.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  opacity: 0.1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the navigation bar */
+nav {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 200px;
+}
+
+/* Style for the logo */
+.logo img {
+  height: 50px; /* Adjust height as needed */
+}
+
+/* Style for the navigation links */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin-top: 30px;
+}
+
+nav li {
+  margin-right: 80px; /* Adjust spacing between nav items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.background-image h1 {
+  color: white;
+  margin-top: 400px;
+  margin-left: 50px;
+  font-weight: 500px;
+}
+.one {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+.car-div {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Add space between items */
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.car-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  height: 400px;
+}
+.car-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: 1s ease;
+}
+.car-image:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: 1s ease;
+}
+.carname {
+  color: black;
+  margin-top: 20px;
+}
+.carprice {
+  color: black;
+  margin-top: 10px;
+}
+
+.book-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Style for "Car Details" button */
+.details-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for buttons */
+.book-button:hover,
+.details-button:hover {
+  opacity: 0.8;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  height: 500px;
+  width: auto;
+  margin-top: 100px;
+}
+.branches {
+  color: white;
+  margin-left: 100px;
+  margin-top: 100px;
+  font-size: 20px;
+}
+.branches li,
+a {
+  list-style: none;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: white;
+}
+.usefull-links {
+  color: white;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.usefull-links li,
+a {
+  list-style: none;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.head-office {
+  color: white;
+  margin-top: 100px;
+}
+.head-office p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+p {
+  color: white;
+  margin-top: 400px;
+}

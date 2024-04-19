@@ -1,0 +1,307 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+body {
+    box-sizing: border-box;
+
+}
+
+.logo {
+    text-align: center; 
+    margin: 40px 0; 
+}
+.background-image{
+    background-image: url('Images/10001.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the navigation bar */
+nav {
+     
+    color: #fff; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px;
+}
+
+/* Style for the logo */
+.logo img {
+    height: 50px; /* Adjust height as needed */
+}
+ 
+
+/* Style for the navigation links */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 30px;
+    
+}
+
+nav li {
+    margin-right: 80px; /* Adjust spacing between nav items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+nav a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+.tagline{
+
+
+    width: 70vw;
+    height: 20vh;
+    margin-top: 250px;
+    margin-left: 300px;
+}
+.tagline h1 {
+    color: white;
+    font-size: 50px;
+}
+.tagline p{
+    color: white;
+    font-size: 20px;
+    width: 900px;
+    margin-top: 20px;
+}
+.back{
+    height: auto;
+    width: auto;
+    background-color: #f4f5f8;
+}
+.price
+{
+    width: auto;
+    height: 100px;
+
+}
+.price h2{
+
+    margin-left: 500px;
+    color: blue;
+    
+    
+}
+.price h1{
+
+    margin-top: 50px;
+    color: black;
+    margin-left: 100px;
+    
+}
+.price-list{
+    margin-top: 50px;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    
+}
+.price-list img{
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.faq-section {
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    display: none; 
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+label:hover {
+    background-color:blue;
+    color: white;
+}
+
+.faq-content {
+    margin-top: 10px;
+    padding: 10px;
+    display: none; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + label + .faq-content {
+    display: block; 
+}
+.main-cars{
+    background-color: black;
+    height: 500px;
+    width: auto;
+    margin-top: -100px;
+}
+
+.check-out-our-cars {
+    text-align: center; 
+    margin: 100px auto; 
+    max-width: 600px; 
+    
+}
+
+.check-out-our-cars h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color:blue;
+}
+
+.check-out-our-cars h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.check-out-our-cars p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.cards{
+    height: 500px;
+    width: 80%;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card{
+    height: 600px;
+    width: 350px;
+    border: 2px solid white;
+    margin-top: -250px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.card img{
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+.card h4{
+
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.tewnty-four{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+}
+.tewnty-four li{
+    list-style: none;
+    font-size: 20px;
+}
+.card button{
+
+    width: 300px;
+    height: 50px;
+    background-color:orange;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.footer-items{
+
+    display: flex;
+    justify-content:space-evenly;
+    background-color: black;
+    height: 500px;
+    width: auto;
+
+}
+.branches{
+    color: white;
+    margin-left: 100px;
+    margin-top: 100px;
+    font-size: 20px;
+}
+.branches li,a{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: white;
+    
+}
+.usefull-links{
+
+    color: white;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.usefull-links li, a{
+
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+
+}
+
+.head-office{
+    color: white;
+    margin-top: 100px;
+}
+.head-office p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+p{
+    color: white;
+    margin-top: 400px;
+}
